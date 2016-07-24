@@ -1,0 +1,19 @@
+{
+  "name": "harambee",
+  "version": "0.1.0",
+  "description": "Family and friends lending app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lin-dev/Harambee.git"
+  },
+  "author": "Christopher Lindor & Nathaniel Quashie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lin-dev/Harambee/issues"
+  },
+  "homepage": "https://github.com/Lin-dev/Harambee#readme"
+}
