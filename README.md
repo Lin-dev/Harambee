@@ -5,3 +5,5 @@ A lending community built using Full-stack Javascript. The basis of this applica
 ````
 Live at http://harambee.herokuapp.com/
 ````
+
+Live at http://harambee.herokuapp.com/
