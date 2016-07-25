@@ -16,6 +16,10 @@ app.get("/signup", function(req,res){
   res.send("Hello from signup");
 });
 
+app.post("/signup", function(req,res){
+  res.render("signup");
+});
+
 app.listen(app.get('port'), function(){
   console.log("Harambee!! Harambee!! Harambee!! Harambee!!");
 });
