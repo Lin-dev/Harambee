@@ -8,6 +8,14 @@ app.get("/", function(req, res){
   res.render("index");
 });
 
+app.get("/login", function(req,res){
+  res.send("Hello from login");
+});
+
+app.get("/signup", function(req,res){
+  res.send("Hello from signup");
+});
+
 app.listen(app.get('port'), function(){
   console.log("Harambee!! Harambee!! Harambee!! Harambee!!");
 });
