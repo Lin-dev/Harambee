@@ -5,7 +5,7 @@ app.set("view engine", "ejs");
 app.set('port', (process.env.PORT || 3000));
 
 app.get("/", function(req, res){
-  res.send("<h1>Hello from Harambee!</h1>")
+  res.render("index");
 });
 
 app.listen(app.get('port'), function(){
