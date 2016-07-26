@@ -1,0 +1,12 @@
+body {
+  font-family: 'Work Sans', sans-serif !important;
+}
+
+#delete_form {
+  display: inline;
+}
+
+.nice-form {
+  width: 30%;
+  margin: 35px auto;
+}
