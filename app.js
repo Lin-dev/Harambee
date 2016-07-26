@@ -3,6 +3,7 @@ var app = express();
 
 app.set("view engine", "ejs");
 app.set('port', (process.env.PORT || 3000));
+app.use(express.static("public"));
 
 app.get("/", function(req, res){
   res.render("index");
@@ -13,11 +14,11 @@ app.get("/login", function(req,res){
 });
 
 app.get("/signup", function(req,res){
-  res.send("Hello from signup");
+  res.render("signup");
 });
 
 app.post("/signup", function(req,res){
-  res.render("signup");
+  res.send("hello from post");
 });
 
 app.listen(app.get('port'), function(){
