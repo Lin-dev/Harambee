@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set('port', (process.env.PORT || 3000));
 
-mongoose.connect(url)
+mongoose.connect(url);
 
 //=============================
 //=====PASSPORT CONFIG=========
