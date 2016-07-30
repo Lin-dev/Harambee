@@ -6,7 +6,7 @@ var LocalStrategy = require("passport-local");
 var passportLocalMongoose = require("passport-local-mongoose");
 var mongoose = require('mongoose');
 
-var url = process.env.DATABASEURL || "mongodb://localhost/Harambee"
+var url = process.env.MONGODB_URI || "mongodb://localhost/Harambee"
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
