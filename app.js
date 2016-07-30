@@ -5,9 +5,11 @@ var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var passportLocalMongoose = require("passport-local-mongoose");
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 var url = process.env.MONGODB_URI || "mongodb://localhost/Harambee"
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set('port', (process.env.PORT || 3000));
@@ -46,7 +48,17 @@ app.get("/signup", function(req,res){
 });
 
 app.post("/signup", function(req,res){
-  res.send("hello from post");
+  var newUser = new User({username:req.body.username})
+  User.register(newUser, req.body.password, function(err, newUser){
+    if(err){
+      console.log("An Error Occur...");
+      return res.render("signup")
+    }
+    passport.authenticate("local")(req,res,function(){
+      console.log("New User Created");
+      res.redirect("/");
+    });
+  });
 });
 
 app.listen(app.get('port'), function(){
