@@ -40,7 +40,14 @@ app.get("/", function(req, res){
 });
 
 app.get("/login", function(req,res){
-  res.send("Hello from login");
+  res.render("login");
+});
+
+app.post("/login", passport.authenticate("local", {
+  successRedirect: "/",
+  failureRedirect: "/login"
+}), function(req, res){
+
 });
 
 app.get("/signup", function(req,res){
