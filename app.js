@@ -35,6 +35,11 @@ passport.deserializeUser(User.deserializeUser());
 //=====      END      =========
 //=============================
 
+
+//=============================
+//=======    Routes     =======
+//=============================
+
 app.get("/", function(req, res){
   res.render("index");
 });
@@ -73,6 +78,9 @@ app.post("/signup", function(req,res){
   });
 });
 
+//=============================
+//=====   Server Start    =====
+//=============================
 app.listen(app.get('port'), function(){
   console.log("Harambee!! Harambee!! Harambee!! Harambee!!");
 });
