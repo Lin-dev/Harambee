@@ -50,6 +50,11 @@ app.post("/login", passport.authenticate("local", {
 
 });
 
+app.get("/logout", function(req, res){
+  req.logout();
+  res.redirect("/");
+})
+
 app.get("/signup", function(req,res){
   res.render("signup");
 });
@@ -59,7 +64,7 @@ app.post("/signup", function(req,res){
   User.register(newUser, req.body.password, function(err, newUser){
     if(err){
       console.log("An Error Occur...");
-      return res.render("signup")
+      return res.render("signup");
     }
     passport.authenticate("local")(req,res,function(){
       console.log("New User Created");
