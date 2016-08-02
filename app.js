@@ -49,7 +49,7 @@ app.get("/login", function(req,res){
 });
 
 app.post("/login", passport.authenticate("local", {
-  successRedirect: "/",
+  successRedirect: "/profile",
   failureRedirect: "/login"
 }), function(req, res){
 
@@ -76,6 +76,10 @@ app.post("/signup", function(req,res){
       res.redirect("/");
     });
   });
+});
+
+app.get("/profile", function(req,res){
+  res.render("profile")
 });
 
 //=============================
