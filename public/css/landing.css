@@ -25,13 +25,13 @@ html {
 }
 
 h1 {
-  font-family: 'Fredoka One';
-  font-size: 9em;
+  font-family: 'Work Sans', sans-serif !important;
+  font-size: 9.5em;
 }
 
 h3 {
   font-size: 1em;
-  font-family: 'Fredoka One';
+  font-family: 'Work Sans', sans-serif !important;
 }
 
 .content{
