@@ -35,6 +35,16 @@ passport.deserializeUser(User.deserializeUser());
 //=====      END      =========
 //=============================
 
+//=============================
+//=========MIDDLEWARE==========
+//=============================
+app.use(function(request, response, next){
+  response.locals.currentUser = request.user;
+  next();
+});
+//=============================
+//=====      END      =========
+//=============================
 
 //=============================
 //=======    Routes     =======
